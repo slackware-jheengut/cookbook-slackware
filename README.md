@@ -4,7 +4,7 @@ Slackware Cookbook
 
 This cookbook adds basic support for the Slackware platform.
 Native resources 'package' and 'service' are expanded, you wont need to use specific resources.
-Also exports a 'slackare_package' resource, just in case.
+Also exports a 'slackware_package' resource, just in case.
 
 Please report issues.
 
