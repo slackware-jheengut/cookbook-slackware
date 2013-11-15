@@ -51,7 +51,7 @@ class Chef
           if @new_resource.start_command
             super
           else
-            shell_out!("#{@rcd_script} start")
+            shell_out!("/bin/sh #{@rcd_script} start")
           end
         end
 
@@ -59,7 +59,7 @@ class Chef
           if @new_resource.stop_command
             super
           else
-            shell_out!("#{@rcd_script} stop")
+            shell_out!("/bin/sh #{@rcd_script} stop")
           end
         end
 
@@ -68,7 +68,7 @@ class Chef
 
             super
           elsif @new_resource.supports[:restart]
-            shell_out!("#{@rcd_script} restart")
+            shell_out!("/bin/sh #{@rcd_script} restart")
           else
             stop_service
             sleep 1
